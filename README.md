@@ -1,4 +1,3 @@
-```markdown
 # Library Management System (Java Swing + MySQL)
 
 This is a robust **Library Management System** built using **Java Swing** for the user interface and **MySQL** for backend data management. The system supports **role-based access control**—Admins and Members—enabling secure and efficient handling of library operations such as book management, borrowing activities, and fine processing.
@@ -33,7 +32,6 @@ This is a robust **Library Management System** built using **Java Swing** for th
 | Design Pattern | DAO (Data Access Object) |
 
 ---
-
 ## Project Structure
 
 ```
