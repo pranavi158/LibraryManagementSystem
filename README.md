@@ -1,26 +1,25 @@
+```markdown
 # Library Management System (Java Swing + MySQL)
 
-A simple yet functional **Library Management System** built using **Java Swing** for GUI and **MySQL** as the backend database. This system supports **role-based access** (Admin & Member), allowing operations like book management, borrowing history, and fine handling.
+This is a robust **Library Management System** built using **Java Swing** for the user interface and **MySQL** for backend data management. The system supports **role-based access control**—Admins and Members—enabling secure and efficient handling of library operations such as book management, borrowing activities, and fine processing.
 
 ---
 
 ## Features
 
-### Role-Based Login
-- **Admin**: Can add books, manage fines, and view member summaries.
-- **Member**: Can borrow/return books, view borrowing history, and check/pay fines.
+### Role-Based Authentication
 
-### Admin Functionalities
-- Add new books with unique IDs.
-- View borrowed books by member ID.
-- Automatically calculate fines for late returns (₹5 per day).
-- View all registered members and their details.
+- **Admin**:
+  - Add new books to the library.
+  - View and manage borrowed book records.
+  - Automatically calculate overdue fines (₹5 per day).
+  - View a summary of all registered members.
 
-### Member Functionalities
-- Borrow and return books.
-- View current borrowing history.
-- Check and pay fines.
-- Search books by ID and browse all available books.
+- **Member**:
+  - Borrow and return books.
+  - View personal borrowing history.
+  - Check and pay fines.
+  - Search books by ID and browse available inventory.
 
 ---
 
@@ -28,14 +27,16 @@ A simple yet functional **Library Management System** built using **Java Swing**
 
 | Layer        | Technology               |
 |--------------|--------------------------|
-| UI           | Java Swing               |
-| Backend      | JDBC (Java DB Connector) |
-| Database     | MySQL                    |
-| Architecture | DAO Pattern              |
+| User Interface | Java Swing             |
+| Backend Logic  | JDBC (Java Database Connectivity) |
+| Database       | MySQL                  |
+| Design Pattern | DAO (Data Access Object) |
 
 ---
 
-##  Project Structure
+## Project Structure
+
+```
 
 LibraryManagementSystem/
 │
@@ -51,7 +52,7 @@ LibraryManagementSystem/
 │   ├── MemberDAO.java
 │   └── UserDAO.java
 │
-├── model/              # Plain Old Java Objects
+├── model/              # Java model classes
 │   ├── Book.java
 │   ├── BorrowRecord.java
 │   ├── Fine.java
@@ -61,34 +62,38 @@ LibraryManagementSystem/
 ├── connect/
 │   └── DBConnection.java
 │
-└── README.md     
+└── README.md
 
-
-
----
-
-## How to Run
-
-1. **Clone the repository**  
-   bash
-   git clone https://github.com/yourusername/LibraryManagementSystem.git
-   cd LibraryManagementSystem
-
-2. **Set up the database**
-
-   * Create a MySQL database named `library_db`
-   * Run the provided `database.sql` to create tables
-   * Update `DBConnection.java` with your MySQL credentials
-
-3. **Compile and Run**
-
-   * Open the project in your IDE (e.g., IntelliJ IDEA, VS Code)
-   * Run `LoginUI.java` as the entry point
+````
 
 ---
 
-## Sample Admin Credentials
+## How to Run the Project
 
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/LibraryManagementSystem.git
+cd LibraryManagementSystem
+````
+
+### Step 2: Set Up the MySQL Database
+
+* Create a new MySQL database named `library_db`.
+* Run the `database.sql` file to generate the required tables and sample data.
+* Open `DBConnection.java` and configure your database credentials (URL, username, password).
+
+### Step 3: Compile and Launch the Application
+
+* Open the project using an IDE like IntelliJ IDEA or Visual Studio Code.
+* Ensure your classpath includes MySQL JDBC driver.
+* Run the `LoginUI.java` file to launch the system.
+
+---
+
+## Sample Credentials
+
+Use the following login details to test the application:
 
 | Username | Password | Role   |
 | -------- | -------- | ------ |
@@ -96,9 +101,3 @@ LibraryManagementSystem/
 | member   | mb001    | MEMBER |
 
 ---
-
-## 📸 Screenshots (Optional)
-
-*Add a few screenshots here of login screen, admin dashboard, and member view for better visibility.*
-
-
